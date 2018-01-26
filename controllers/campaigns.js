@@ -9,7 +9,34 @@ exports.findAll = function(req, res){
 	});
 };
 
-exports.findById = function() {};
-exports.add = function() {};
-exports.update = function() {};
-exports.delete = function() {};
+exports.findById = function(req, res){
+  var id = req.params.id;
+  Campaign.findOne({'_id':id},function(err, result) {
+    return res.send(result);
+  });
+};
+
+exports.add = function(req, res) {
+	Campaign.create(req.body, function (err, campaign){
+		if (err) return console.log(err);
+		return res.send(campaign);
+	});
+};
+
+exports.update = function(req, res) {
+  var id = req.params.id;
+  var updates = req.body;
+
+  Campaign.update({"_id":id}, req.body,
+    function (err, numberAffected) {
+      if (err) return console.log(err);
+      console.log('Updated %d campaigns', numberAffected);
+      res.send(202);
+  });
+}
+exports.delete = function(req, res){
+  var id = req.params.id;
+  Campaign.remove({'_id':id},function(result) {
+    return res.send(result);
+  });
+};
