@@ -36,7 +36,7 @@ var routes = require('./routes')(app);
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
+app.listen(process.env.PORT || 5000)
 
-app.listen(29374);
 // console.log('server running at http://localhost:3001/');
 
