@@ -27,8 +27,7 @@ exports.add = function(req, res) {
 	// });
 
 	var campaign_data = {
-	title: req.params.title,
-	id: req.params.id
+	campaign_id: req.body.campaign_id
 };
 
 	var newCampaign = new Campaign(campaign_data);
