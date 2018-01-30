@@ -4,7 +4,8 @@ var mongoose = require('mongoose');
 
 
 var CampaignSchema = new mongoose.Schema({
-	campaign_id: Number
+	campaignID: Number,
+	deviceID: Number
 });
 
 mongoose.model('Campaign', CampaignSchema);
