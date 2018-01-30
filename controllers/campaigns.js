@@ -26,7 +26,7 @@ exports.add = function(req, res) {
 	var device_id = req.param('device_id');
 	
 	var newCampaign = new Campaign({
-		campaignID: campaign_id
+		campaignID: campaign_id,
 		deviceID: device_id
 	});
 
