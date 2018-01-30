@@ -22,8 +22,8 @@ exports.add = function(req, res) {
 	// 	return res.send(campaign);
 	//  });
 
-	var campaign_id = req.param('campaign_id');
-	var device_id = req.param('device_id');
+	var campaign_id = req.params('campaign_id');
+	var device_id = req.params('device_id');
 	
 	var newCampaign = new Campaign({
 		campaignID: campaign_id,
