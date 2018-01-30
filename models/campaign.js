@@ -7,7 +7,7 @@ var CampaignSchema = new mongoose.Schema({
 	// title: String,
 	// id: Number, 
 	// beacon: String
-	campaign: Object
+	campaign: Mixed
 });
 
 mongoose.model('Campaign', CampaignSchema);
