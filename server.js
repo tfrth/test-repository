@@ -1,9 +1,11 @@
 //server.js
 
 var express = require('express');
+var bodyParser = require('body-parser');
+
 mongoose = require('mongoose');
 fs = require('fs');
-bodyParser = require('body-parser');
+//bodyParser = require('body-parser');
 
 //var mongoUri = 'mongodb://<dbuser>:<dbpassword>@ds143907.mlab.com:43907/campaign_test'
 

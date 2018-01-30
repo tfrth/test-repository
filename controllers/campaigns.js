@@ -17,11 +17,19 @@ exports.findById = function(req, res){
 };
 
 exports.add = function(req, res) {
-	Campaign.create(req.body, function (err, campaign){
-		if (err) return console.log(err);
-		return res.send(campaign);
+	// Campaign.create(req.body, function (err, campaign){
+	// 	if (err) return console.log(err);
+	// 	return res.send(campaign);
+	var newCampaign = new Campaign(req.body);
+	newCampaign.save();
+	.then(item => {
+		res.send("campaign saved to db");
+	})
+	.catch(err => {
+		res.status(400).send("bummer, ok");
 	});
-};
+});
+
 
 exports.update = function(req, res) {
   var id = req.params.id;
