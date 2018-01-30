@@ -21,7 +21,7 @@ exports.add = function(req, res) {
 	// 	if (err) return console.log(err);
 	// 	return res.send(campaign);
 	var newCampaign = new Campaign(req.body);
-	newCampaign.save();
+	newCampaign.save()
 	.then(item => {
 		res.send("campaign saved to db");
 	})
