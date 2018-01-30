@@ -20,10 +20,19 @@ exports.add = function(req, res) {
 	// Campaign.create(req.body, function (err, campaign){
 	// 	if (err) return console.log(err);
 	// 	return res.send(campaign);
-	var newCampaign = new Campaign({
-		title: req.body.title,
-		id: req.body.id
-	});
+	
+	// var newCampaign = new Campaign({
+	// 	title: req.body.title,
+	// 	id: req.body.id
+	// });
+
+	var campaign_data = {
+	title: req.params.title,
+	id: req.params.id
+};
+
+	var newCampaign = new Campaign(campaign_data);
+
 	newCampaign.save()
 	.then(item => {
 		res.send({
