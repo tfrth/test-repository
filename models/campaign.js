@@ -4,10 +4,8 @@ var mongoose = require('mongoose');
 
 
 var CampaignSchema = new mongoose.Schema({
-	// title: String,
-	// id: Number, 
-	// beacon: String
-	campaign: Mixed
+	title: String,
+	id: Number
 });
 
 mongoose.model('Campaign', CampaignSchema);

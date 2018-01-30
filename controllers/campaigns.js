@@ -23,7 +23,13 @@ exports.add = function(req, res) {
 	var newCampaign = new Campaign(req.body);
 	newCampaign.save()
 	.then(item => {
-		res.send("campaign saved to db");
+		res.send({
+			"notification": {
+   				"title": "Endpoint Test",
+   				"message": "This is test: campaign endpoint push notification.",
+   				"ignore_cooldown": true
+ 			}
+		});
 	})
 	.catch(err => {
 		res.status(400).send("bummer, ok");
