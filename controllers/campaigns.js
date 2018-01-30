@@ -28,7 +28,7 @@ exports.add = function(req, res) {
 	.catch(err => {
 		res.status(400).send("bummer, ok");
 	});
-});
+};
 
 
 exports.update = function(req, res) {
