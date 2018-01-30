@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 
 
 var CampaignSchema = new mongoose.Schema({
-	title: String
+	title: String,
 	id: Number
 });
 
