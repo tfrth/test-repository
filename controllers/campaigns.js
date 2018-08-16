@@ -17,25 +17,17 @@ exports.findById = function(req, res){
 };
 
 exports.add = function(req, res) {
-	// Campaign.create(req.body, function (err, campaign){
-	// 	if (err) return console.log(err);
-	// 	return res.send(campaign);
-	//  });
 
 	var campaign_id = req.param('campaign_id');
 	var device_id = req.param('device_id');
 	
 	var newCampaign = new Campaign({
-		campaignID: campaign_id,
-		deviceID: device_id
+		campaign_id: campaign_id,
+		device_id: device_id
 	});
 
-// 	var campaign_data = {
-// 	campaign_id: req.body.campaign_id
-// };
-
-// 	var newCampaign = new Campaign(campaign_data);
-	//var newCampaign = new Campaign(req.body);
+	
+	//campaign response as notification to meridian
 	newCampaign.save()
 	.then(item => {
 		res.send({

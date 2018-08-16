@@ -4,9 +4,9 @@ var mongoose = require('mongoose');
 
 
 var CampaignSchema = new mongoose.Schema({
-	campaignID: Number,
-	deviceID: Number
+	campaign_id: String,
+	device_id: String
 });
 
-mongoose.model('Campaign', CampaignSchema);
+module.exports = mongoose.model('Campaign', CampaignSchema);
 
