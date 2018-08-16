@@ -41,7 +41,7 @@ exports.add = function(req, res) {
 		res.send({
 			"notification": {
    				"title": "Endpoint Test",
-   				"message": "This is test: campaign endpoint push notification.",
+   				"message": "hello world - notification from custom endpoint.",
    				"ignore_cooldown": true
  			}
 		});
