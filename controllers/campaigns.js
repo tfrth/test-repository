@@ -34,7 +34,7 @@ exports.add = function(req, res) {
 			"notification": {
    				"title": "Endpoint Test",
 					 "message": "hello world - notification from custom endpoint.",
-					 "path": "https://www.google.com",
+					// "path": "https://www.google.com",
    				"ignore_cooldown": true
  			}
 		});
